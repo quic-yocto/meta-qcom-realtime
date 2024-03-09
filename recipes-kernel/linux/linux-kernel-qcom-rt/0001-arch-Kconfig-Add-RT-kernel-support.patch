@@ -1,0 +1,28 @@
+From 2c059db20f06aed52fc0bd438fdde50e37a60d21 Mon Sep 17 00:00:00 2001
+From: Sahil Chandna <quic_chandna@quicinc.com>
+Date: Wed, 22 Nov 2023 16:37:44 +0530
+Subject: [PATCH] arch/Kconfig: Add RT kernel support
+
+Enable CONFIG_ARCH_SUPPORTS_RT for RT
+support.
+
+Change-Id: I939757cdf3718b9c1467c99d53cb312b70040571
+Signed-off-by: Sahil Chandna <quic_chandna@quicinc.com>
+---
+ arch/Kconfig | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/arch/Kconfig b/arch/Kconfig
+index aff2746c8af2..eb815dccfbda 100644
+--- a/arch/Kconfig
++++ b/arch/Kconfig
+@@ -1209,7 +1209,7 @@ config ARCH_NO_PREEMPT
+ 	bool
+
+ config ARCH_SUPPORTS_RT
+-	bool
++	def_bool y
+
+ config CPU_NO_EFFICIENT_FFS
+ 	def_bool n
+2.17.1
