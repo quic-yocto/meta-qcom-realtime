@@ -20,20 +20,27 @@ configurations.
 
 Refer to https://github.com/quic-yocto/qcom-manifest/blob/qcom-linux-kirkstone/README.md setup the host environment.
 
-## Download the Yocto Project BSP
+## Download the realtime-linux Yocto Project
 
-Refer to https://github.com/quic-yocto/qcom-manifest/blob/qcom-linux-kirkstone/README.md Sync Yocto Project BSP.
+```shell
+mkdir [release]
+cd [release]
+repo init -u https://github.com/quic-yocto/qcom-manifest -b [branch name] -m [release manifest]
+repo sync -c -j8
+```
+## Example
+To download the qcom-6.6.17-QLI.1.0-Ver.1.3_realtime-linux-1.0.xml
+
+```shell
+repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-kirkstone -m qcom-6.6.17-QLI.1.0-Ver.1.3_realtime-linux-1.0.xml
+repo sync -c -j8
+```
 
 ## Build Realtime Linux Layer
 
 ```shell
 export SHELL=/bin/bash
 MACHINE=qcm6490 DISTRO=qcom-wayland source setup-environment
-```
-
-## Run below command to download  "meta-qcom-realtime" layer in [release] directory where you have just downloaded Yocto Project BSP.
-```shell
-git clone https://github.com/quic-yocto/meta-qcom-realtime -b kirkstone layers/meta-qcom-realtime
 ```
 
 ## Add meta-qcom-realtime layer in build-qcom-wayland/conf/bblayers.conf file
