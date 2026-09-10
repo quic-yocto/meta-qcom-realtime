@@ -27,10 +27,10 @@ repo init -u https://github.com/qualcomm-linux/qcom-manifest -b [branch name] -m
 repo sync -c -j8
 ```
 ## Example
-To download the qcom-6.6.136-QLI.1.9-Ver.1.1 release
+To download the qcom-6.6.142-QLI.1.9.1-Ver.1.0 release
 
 ```shell
-repo init -u https://github.com/qualcomm-linux/qcom-manifest -b qcom-linux-scarthgap -m qcom-6.6.136-QLI.1.9-Ver.1.1.xml
+repo init -u https://github.com/qualcomm-linux/qcom-manifest -b qcom-linux-scarthgap -m qcom-6.6.142-QLI.1.9.1-Ver.1.0.xml
 repo sync
 ```
 
@@ -44,9 +44,9 @@ Note: Find the latest "meta-qcom-realtime" layer release tag names at https://gi
 
 ## Examples
 
-To download the `qcom-6.6.136-QLI.1.9-Ver.1.1_realtime-linux-1.1` release tag
+To download the `qcom-6.6.142-QLI.1.9.1-Ver.1.0_realtime-linux-1.0` release tag
 ```shell
-git clone https://github.com/qualcomm-linux/meta-qcom-realtime -b qcom-6.6.136-QLI.1.9-Ver.1.1_realtime-linux-1.1 layers/meta-qcom-realtime
+git clone https://github.com/qualcomm-linux/meta-qcom-realtime -b qcom-6.6.142-QLI.1.9.1-Ver.1.0_realtime-linux-1.0 layers/meta-qcom-realtime
 ```
 
 ## Build Realtime Linux Layer
